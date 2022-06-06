@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Mariu\Documents\ReClass\PS4\ReClass.NET.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB086579-4880-422B-BE23-0BCB2D16A178}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>ReClass.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ApplicationVersion>1.2.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ColorCode">
+      <HintPath>lib\ColorCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ExceptionMessageBox">
+      <HintPath>lib\Microsoft.ExceptionMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="libdebug">
+      <HintPath>lib\libdebug.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ReClassNET\Constants.cs" />
+    <Compile Include="ReClassNET\Program.cs" />
+    <Compile Include="ReClassNET\Settings.cs" />
+    <Compile Include="ReClassNET\Symbols\DisposableWrapper.cs" />
+    <Compile Include="ReClassNET\Symbols\ComDisposableWrapper`1.cs" />
+    <Compile Include="ReClassNET\Symbols\SymbolReader.cs" />
+    <Compile Include="ReClassNET\Symbols\DiaUtil.cs" />
+    <Compile Include="ReClassNET\Symbols\SymbolStore.cs" />
+    <Compile Include="ReClassNET\Plugins\DefaultPluginHost.cs" />
+    <Compile Include="ReClassNET\Plugins\IPluginHost.cs" />
+    <Compile Include="ReClassNET\Plugins\PluginHostContract.cs" />
+    <Compile Include="ReClassNET\Plugins\Plugin.cs" />
+    <Compile Include="ReClassNET\Plugins\PluginInfo.cs" />
+    <Compile Include="ReClassNET\Plugins\PluginManager.cs" />
+    <Compile Include="ReClassNET\Logger\BaseLogger.cs" />
+    <Compile Include="ReClassNET\Logger\GuiLogger.cs" />
+    <Compile Include="ReClassNET\Logger\NewLogEntryEventHandler.cs" />
+    <Compile Include="ReClassNET\Logger\ILogger.cs" />
+    <Compile Include="ReClassNET\Logger\LoggerContract.cs" />
+    <Compile Include="ReClassNET\Logger\LogLevel.cs" />
+    <Compile Include="ReClassNET\Logger\NullLogger.cs" />
+    <Compile Include="ReClassNET\Util\BitString.cs" />
+    <Compile Include="ReClassNET\Util\CircularBuffer`1.cs" />
+    <Compile Include="ReClassNET\Util\CommandLineArgs.cs" />
+    <Compile Include="ReClassNET\Util\CustomDataMap.cs" />
+    <Compile Include="ReClassNET\Util\DirectedGraph`1.cs" />
+    <Compile Include="ReClassNET\Util\GrowingList`1.cs" />
+    <Compile Include="ReClassNET\Util\HexadecimalFormatter.cs" />
+    <Compile Include="ReClassNET\Util\IntPtrComparer.cs" />
+    <Compile Include="ReClassNET\Util\NumberFormat.cs" />
+    <Compile Include="ReClassNET\Util\PathUtil.cs" />
+    <Compile Include="ReClassNET\Util\SettingsSerializer.cs" />
+    <Compile Include="ReClassNET\Util\Utils.cs" />
+    <Compile Include="ReClassNET\Util\ValueTypeWrapper`1.cs" />
+    <Compile Include="ReClassNET\Util\WinUtil.cs" />
+    <Compile Include="ReClassNET\Util\XElementSerializer.cs" />
+    <Compile Include="ReClassNET\Util\Rtf\RtfBuilder.cs" />
+    <Compile Include="ReClassNET\Util\Rtf\RtfFont.cs" />
+    <Compile Include="ReClassNET\Util\Conversion\BigEndianBitConverter.cs" />
+    <Compile Include="ReClassNET\Util\Conversion\EndianBitConverter.cs" />
+    <Compile Include="ReClassNET\Util\Conversion\LittleEndianBitConverter.cs" />
+    <Compile Include="ReClassNET\UI\BannerFactory.cs" />
+    <Compile Include="ReClassNET\UI\BindingDisplayWrapper`1.cs" />
+    <Compile Include="ReClassNET\UI\DpiUtil.cs" />
+    <Compile Include="ReClassNET\UI\IconProvider.cs" />
+    <Compile Include="ReClassNET\UI\LinkedWindowFeatures.cs" />
+    <Compile Include="ReClassNET\UI\CustomToolStripProfessionalRenderer.cs" />
+    <Compile Include="ReClassNET\UI\CustomProfessionalColorTable.cs" />
+    <Compile Include="ReClassNET\UI\NodeTypesBuilder.cs" />
+    <Compile Include="ReClassNET\UI\HotSpotType.cs" />
+    <Compile Include="ReClassNET\UI\HotSpot.cs" />
+    <Compile Include="ReClassNET\UI\FontEx.cs" />
+    <Compile Include="ReClassNET\UI\GlobalWindowManagerEventArgs.cs" />
+    <Compile Include="ReClassNET\UI\GlobalWindowManager.cs" />
+    <Compile Include="ReClassNET\Properties\Resources.cs" />
+    <Compile Include="ReClassNET\Properties\Settings.cs" />
+    <Compile Include="ReClassNET\Controls\BannerBox.cs" />
+    <Compile Include="ReClassNET\Controls\DrawContextRequestEventArgs.cs" />
+    <Compile Include="ReClassNET\Controls\DrawContextRequestEventHandler.cs" />
+    <Compile Include="ReClassNET\Controls\NodeClickEventArgs.cs" />
+    <Compile Include="ReClassNET\Controls\NodeClickEventHandler.cs" />
+    <Compile Include="ReClassNET\Controls\ProjectView.cs" />
+    <Compile Include="ReClassNET\Controls\ColorBox.cs" />
+    <Compile Include="ReClassNET\Controls\IntegerToolStripMenuItem.cs" />
+    <Compile Include="ReClassNET\Controls\TypeToolStripMenuItem.cs" />
+    <Compile Include="ReClassNET\Controls\TypeToolStripButton.cs" />
+    <Compile Include="ReClassNET\Controls\DualValueBox.cs" />
+    <Compile Include="ReClassNET\Controls\DualValueControlDesigner.cs" />
+    <Compile Include="ReClassNET\Controls\EnumComboBox`1.cs" />
+    <Compile Include="ReClassNET\Controls\EnumDescriptionDisplay`1.cs" />
+    <Compile Include="ReClassNET\Controls\HotkeyBox.cs" />
+    <Compile Include="ReClassNET\Controls\HotkeyBoxDesigner.cs" />
+    <Compile Include="ReClassNET\Controls\IconButton.cs" />
+    <Compile Include="ReClassNET\Controls\IconButtonDesigner.cs" />
+    <Compile Include="ReClassNET\Controls\MemoryPreviewPopUp.cs" />
+    <Compile Include="ReClassNET\Controls\MemorySearchResultControlResultDoubleClickEventHan.cs" />
+    <Compile Include="ReClassNET\Controls\MemoryRecordList.cs" />
+    <Compile Include="ReClassNET\Controls\MemoryViewControl.cs" />
+    <Compile Include="ReClassNET\Controls\PlaceholderTextBox.cs" />
+    <Compile Include="ReClassNET\Controls\HotSpotTextBox.cs" />
+    <Compile Include="ReClassNET\Controls\HotSpotTextBoxCommitEventHandler.cs" />
+    <Compile Include="ReClassNET\Controls\HotSpotTextBoxCommitEventArgs.cs" />
+    <Compile Include="ReClassNET\Controls\DrawContext.cs" />
+    <Compile Include="ReClassNET\Project\CppTypeMapping.cs" />
+    <Compile Include="ReClassNET\Project\EnumDescription.cs" />
+    <Compile Include="ReClassNET\Project\ReClassNetProject.cs" />
+    <Compile Include="ReClassNET\Project\ClassReferencedException.cs" />
+    <Compile Include="ReClassNET\Project\EnumReferencedException.cs" />
+    <Compile Include="ReClassNET\Nodes\ArrayNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseClassWrapperNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseFunctionNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseWrapperArrayNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseWrapperNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BoolNode.cs" />
+    <Compile Include="ReClassNET\Nodes\ClassUtil.cs" />
+    <Compile Include="ReClassNET\Nodes\EnumNode.cs" />
+    <Compile Include="ReClassNET\Nodes\FunctionNode.cs" />
+    <Compile Include="ReClassNET\Nodes\NIntNode.cs" />
+    <Compile Include="ReClassNET\Nodes\PointerNode.cs" />
+    <Compile Include="ReClassNET\Nodes\NUIntNode.cs" />
+    <Compile Include="ReClassNET\Nodes\UnionNode.cs" />
+    <Compile Include="ReClassNET\Nodes\INodeInfoReader.cs" />
+    <Compile Include="ReClassNET\Nodes\NodeInfoReaderContract.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseContainerNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseFunctionPtrNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseHexCommentNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseHexNode.cs" />
+    <Compile Include="ReClassNET\Nodes\NodeEventHandler.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseNodeContract.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseTextNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseTextPtrNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseMatrixNode.cs" />
+    <Compile Include="ReClassNET\Nodes\BitFieldNode.cs" />
+    <Compile Include="ReClassNET\Nodes\ClassInstanceNode.cs" />
+    <Compile Include="ReClassNET\Nodes\DoubleNode.cs" />
+    <Compile Include="ReClassNET\Nodes\FloatNode.cs" />
+    <Compile Include="ReClassNET\Nodes\FunctionPtrNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Int16Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Int32Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Int64Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Int8Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Matrix3x3Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Matrix3x4Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Matrix4x4Node.cs" />
+    <Compile Include="ReClassNET\Nodes\BaseNumericNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Utf16TextNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Utf16TextPtrNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Utf32TextNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Utf32TextPtrNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Utf8TextNode.cs" />
+    <Compile Include="ReClassNET\Nodes\UInt32Node.cs" />
+    <Compile Include="ReClassNET\Nodes\UInt64Node.cs" />
+    <Compile Include="ReClassNET\Nodes\UInt8Node.cs" />
+    <Compile Include="ReClassNET\Nodes\ClassCreatedEventHandler.cs" />
+    <Compile Include="ReClassNET\Nodes\ClassNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Hex16Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Hex32Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Hex64Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Hex8Node.cs" />
+    <Compile Include="ReClassNET\Nodes\UInt16Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Utf8TextPtrNode.cs" />
+    <Compile Include="ReClassNET\Nodes\Vector2Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Vector3Node.cs" />
+    <Compile Include="ReClassNET\Nodes\Vector4Node.cs" />
+    <Compile Include="ReClassNET\Nodes\VirtualMethodNode.cs" />
+    <Compile Include="ReClassNET\Nodes\VirtualMethodTableNode.cs" />
+    <Compile Include="ReClassNET\Native\INativeMethods.cs" />
+    <Compile Include="ReClassNET\Native\NativeMethodsContract.cs" />
+    <Compile Include="ReClassNET\Native\NativeMethodsUnix.cs" />
+    <Compile Include="ReClassNET\Native\NativeMethodsWindows.cs" />
+    <Compile Include="ReClassNET\Native\NativeMethods.cs" />
+    <Compile Include="ReClassNET\Memory\Disassembler.cs" />
+    <Compile Include="ReClassNET\Memory\DisassembledInstruction.cs" />
+    <Compile Include="ReClassNET\Memory\IProcessReader.cs" />
+    <Compile Include="ReClassNET\Memory\IRemoteMemoryReader.cs" />
+    <Compile Include="ReClassNET\Memory\IRemoteMemoryWriter.cs" />
+    <Compile Include="ReClassNET\Memory\Module.cs" />
+    <Compile Include="ReClassNET\Memory\NodeDissector.cs" />
+    <Compile Include="ReClassNET\Memory\Dumper.cs" />
+    <Compile Include="ReClassNET\Memory\SectionCategory.cs" />
+    <Compile Include="ReClassNET\Memory\SectionProtection.cs" />
+    <Compile Include="ReClassNET\Memory\SectionType.cs" />
+    <Compile Include="ReClassNET\Memory\Section.cs" />
+    <Compile Include="ReClassNET\Memory\SimplePeHeader.cs" />
+    <Compile Include="ReClassNET\Memory\UInt8Data.cs" />
+    <Compile Include="ReClassNET\Memory\UInt16Data.cs" />
+    <Compile Include="ReClassNET\Memory\UInt32FloatData.cs" />
+    <Compile Include="ReClassNET\Memory\UInt64FloatDoubleData.cs" />
+    <Compile Include="ReClassNET\Memory\MemoryBuffer.cs" />
+    <Compile Include="ReClassNET\Memory\ProcessInfo.cs" />
+    <Compile Include="ReClassNET\Memory\RemoteProcessEvent.cs" />
+    <Compile Include="ReClassNET\Memory\RemoteProcess.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\PatternMaskFormat.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\BytePattern.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ComplexScannerWorker.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\InputCorrelatedScanner.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\IScannerWorker.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\MemoryRecordAddressMode.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\MemoryRecord.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\PatternScanner.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanCompareType.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScannerContext.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\SimpleScannerWorker.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanResultBlock.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanResultStore.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanValueType.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanRoundMode.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ByteScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ShortScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\IntegerScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\LongScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\FloatScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\DoubleScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ArrayOfBytesScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\StringScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\RegexStringScanResult.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Scanner.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\SettingState.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\ScanSettings.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\ArrayOfBytesMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\ByteMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\DoubleMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\FloatMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\IComplexScanComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\IScanComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\IntegerMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\ISimpleScanComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\LongMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\RegexStringMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\ShortMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\StringMemoryComparer.cs" />
+    <Compile Include="ReClassNET\MemoryScanner\Comparer\InvalidCompareTypeException.cs" />
+    <Compile Include="ReClassNET\Input\KeyboardInput.cs" />
+    <Compile Include="ReClassNET\Input\KeyboardHotkey.cs" />
+    <Compile Include="ReClassNET\Forms\EnumEditorForm.cs" />
+    <Compile Include="ReClassNET\Forms\UnderlyingSizeComboBox.cs" />
+    <Compile Include="ReClassNET\Forms\EnumListForm.cs" />
+    <Compile Include="ReClassNET\Forms\EnumSelectionForm.cs" />
+    <Compile Include="ReClassNET\Forms\SocketListener.cs" />
+    <Compile Include="ReClassNET\Forms\IniFile.cs" />
+    <Compile Include="ReClassNET\Forms\MainForm.cs" />
+    <Compile Include="ReClassNET\Forms\NamedAddressesForm.cs" />
+    <Compile Include="ReClassNET\Forms\ClassSelectionForm.cs" />
+    <Compile Include="ReClassNET\Forms\FoundCodeForm.cs" />
+    <Compile Include="ReClassNET\Forms\InputBytesForm.cs" />
+    <Compile Include="ReClassNET\Forms\InputCorrelatorForm.cs" />
+    <Compile Include="ReClassNET\Forms\ScannerForm.cs" />
+    <Compile Include="ReClassNET\Forms\InvalidInputException.cs" />
+    <Compile Include="ReClassNET\Forms\AboutForm.cs" />
+    <Compile Include="ReClassNET\Forms\CodeForm.cs" />
+    <Compile Include="ReClassNET\Forms\RtfFormatter.cs" />
+    <Compile Include="ReClassNET\Forms\IconForm.cs" />
+    <Compile Include="ReClassNET\Forms\LogForm.cs" />
+    <Compile Include="ReClassNET\Forms\PluginForm.cs" />
+    <Compile Include="ReClassNET\Forms\SettingsForm.cs" />
+    <Compile Include="ReClassNET\Forms\ProcessBrowserForm.cs" />
+    <Compile Include="ReClassNET\Forms\ProcessInfoForm.cs" />
+    <Compile Include="ReClassNET\Extensions\ByteExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\IRemoteMemoryReaderExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\IRemoteMemoryWriterExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\ListExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\PointExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="ReClassNET\Extensions\XAttributeExtensions.cs" />
+    <Compile Include="ReClassNET\Extensions\BinaryReaderWriterExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\ExtensionColor.cs" />
+    <Compile Include="ReClassNET\Extensions\DataGridViewExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\DictionaryExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\EncodingExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\FloatingPointExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\GraphicsExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\IntPtrExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\RichTextBoxExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\StringExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\StringReaderExtension.cs" />
+    <Compile Include="ReClassNET\Extensions\EnumerableExtension.cs" />
+    <Compile Include="ReClassNET\Debugger\BreakpointAlreadySetException.cs" />
+    <Compile Include="ReClassNET\Debugger\ExceptionDebugInfo.cs" />
+    <Compile Include="ReClassNET\Debugger\DebugContinueStatus.cs" />
+    <Compile Include="ReClassNET\Debugger\DebugEvent.cs" />
+    <Compile Include="ReClassNET\Debugger\HardwareBreakpointRegister.cs" />
+    <Compile Include="ReClassNET\Debugger\HardwareBreakpointTrigger.cs" />
+    <Compile Include="ReClassNET\Debugger\HardwareBreakpointSize.cs" />
+    <Compile Include="ReClassNET\Debugger\HardwareBreakpoint.cs" />
+    <Compile Include="ReClassNET\Debugger\NoHardwareBreakpointAvailableException.cs" />
+    <Compile Include="ReClassNET\Debugger\RemoteDebuggerExtensions.cs" />
+    <Compile Include="ReClassNET\Debugger\RemoteDebugger.cs" />
+    <Compile Include="ReClassNET\Debugger\SoftwareBreakpoint.cs" />
+    <Compile Include="ReClassNET\Debugger\BreakpointSplit.cs" />
+    <Compile Include="ReClassNET\Debugger\BreakpointHandler.cs" />
+    <Compile Include="ReClassNET\Debugger\IBreakpoint.cs" />
+    <Compile Include="ReClassNET\Debugger\BreakpointContract.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\CheatEngineFile.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\CrySearchFile.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\IScannerExport.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\ScannerExportContract.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\IScannerImport.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\ScannerImportContract.cs" />
+    <Compile Include="ReClassNET\DataExchange\Scanner\ReClassScanFile.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ReClassClipboard.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ReClassNetFile.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\CreateNodeFromElementHandler.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\CreateElementFromNodeHandler.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ICustomNodeSerializer.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\CustomNodeSerializerContract.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\CustomNodeSerializer.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\IReClassExport.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ReClassExportContract.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ReClassFile.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\IReClassImport.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ReClassImportContract.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\ReClassQtFile.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\Legacy\BaseClassArrayNode.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\Legacy\ClassInstanceArrayNode.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\Legacy\ClassPointerArrayNode.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\Legacy\ClassPointerNode.cs" />
+    <Compile Include="ReClassNET\DataExchange\ReClass\Legacy\CustomNode.cs" />
+    <Compile Include="ReClassNET\Core\CoreFunctionsManager.cs" />
+    <Compile Include="ReClassNET\Core\ProcessAccess.cs" />
+    <Compile Include="ReClassNET\Core\ControlRemoteProcessAction.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateProcessData.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateRemoteSectionData.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateRemoteModuleData.cs" />
+    <Compile Include="ReClassNET\Core\InstructionData.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateProcessCallback.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateRemoteSectionCallback.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateRemoteModuleCallback.cs" />
+    <Compile Include="ReClassNET\Core\ICoreProcessFunctions.cs" />
+    <Compile Include="ReClassNET\Core\IInternalCoreFunctions.cs" />
+    <Compile Include="ReClassNET\Core\EnumerateInstructionCallback.cs" />
+    <Compile Include="ReClassNET\Core\InternalCoreFunctions.cs" />
+    <Compile Include="ReClassNET\Core\NativeCoreWrapper.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\Language.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\WriteNodeFunc.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\GetTypeDefinitionFunc.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\ResolveWrappedTypeFunc.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\CustomCppCodeGenerator.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\CppCodeGenerator.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\CSharpCodeGenerator.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\ICodeGenerator.cs" />
+    <Compile Include="ReClassNET\CodeGenerator\CodeGeneratorContract.cs" />
+    <Compile Include="ReClassNET\AddressParser\DynamicCompiler.cs" />
+    <Compile Include="ReClassNET\AddressParser\IExecutor.cs" />
+    <Compile Include="ReClassNET\AddressParser\Interpreter.cs" />
+    <Compile Include="ReClassNET\AddressParser\IExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\BinaryExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\AddExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\SubtractExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\MultiplyExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\DivideExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\ConstantExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\UnaryExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\NegateExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\ReadMemoryExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\ModuleExpression.cs" />
+    <Compile Include="ReClassNET\AddressParser\ITokenizer.cs" />
+    <Compile Include="ReClassNET\AddressParser\ParseException.cs" />
+    <Compile Include="ReClassNET\AddressParser\Parser.cs" />
+    <Compile Include="ReClassNET\AddressParser\Token.cs" />
+    <Compile Include="ReClassNET\AddressParser\Tokenizer.cs" />
+    <Compile Include="Dia2Lib\DiaSource.cs" />
+    <Compile Include="Dia2Lib\IDiaDataSource.cs" />
+    <Compile Include="Dia2Lib\IDiaSession.cs" />
+    <Compile Include="Dia2Lib\IDiaSymbol.cs" />
+    <Compile Include="Dia2Lib\SymTagEnum.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReClassNET\Controls\ColorBox.resx" />
+    <EmbeddedResource Include="ReClassNET\Controls\DualValueBox.resx" />
+    <EmbeddedResource Include="ReClassNET\Controls\HotkeyBox.resx" />
+    <EmbeddedResource Include="ReClassNET\Controls\MemoryRecordList.resx" />
+    <EmbeddedResource Include="ReClassNET\Controls\MemoryViewControl.resx" />
+    <EmbeddedResource Include="ReClassNET\Controls\ProjectView.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\AboutForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\ClassSelectionForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\CodeForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\EnumEditorForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\EnumListForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\EnumSelectionForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\FoundCodeForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\InputBytesForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\InputCorrelatorForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\LogForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\MainForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\NamedAddressesForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\PluginForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\ProcessBrowserForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\ProcessInfoForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\ScannerForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\SettingsForm.resx" />
+    <EmbeddedResource Include="ReClassNET\Forms\SocketListener.resx" />
+    <EmbeddedResource Include="ReClassNET\Properties\Resources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
